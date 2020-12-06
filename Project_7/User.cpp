@@ -100,6 +100,9 @@ void User::addRate(Hotel* hotel, Rating rate)
 {
 	Rating* rating = new Rating;
 	*rating = rate;
+	if(ratings[hotel] != NULL)
+		hotel -> deleteRate(*(ratings[hotel]));
+	hotel -> addRate(rate);
 	ratings[hotel] = rating;
 }
 

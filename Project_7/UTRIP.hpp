@@ -45,7 +45,6 @@ class Utrip
 		std::stringstream printRates(std::string id);
 		void cleanFilters();
 		void deleteFilterType(std::string type);
-		void setHotelRating(std::string hotel_id, Rating rate);
 };
 
 #endif

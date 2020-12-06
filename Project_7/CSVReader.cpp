@@ -2,7 +2,6 @@
 #include "Hotel.hpp"
 #include "UTRIP.hpp"
 #include "GeneralFunctions.hpp"
-#include "Rating.hpp"
 
 using namespace std;
 

@@ -8,6 +8,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	string file_path(argv[ONE]);
+
 	Utrip* utrip = new Utrip();
 	CSVReader reader(utrip);
 	reader.readData(file_path);
