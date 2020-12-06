@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGIN</title>
+    <style>
+      body
+      {
+        background-color: pink;
+      }
+      div 
+      {
+        width: 600px;
+        background-color: lightblue;
+        border: 10px solid blue;
+        margin: auto;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      input[type=text], input[type=password]
+      {
+        background-color: #f2f2f2; 
+        width: auto;
+        padding: 12px 20px;
+        margin: 8px 0;
+        font-size: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+      }
+      input[type=button], input[type=submit], input[type=reset] 
+      {
+        background-color: #4CAF50;
+        border: 1;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      input
+      {
+        color: black;
+        text-align:center;
+      }
+      #massage
+      {
+        color: purple;
+        text-align:center;
+      }
+      h2
+      {
+        color: gray;
+        text-align:center;
+      }
+      a:link, a:visited 
+      {
+        background-color: gray;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <br><br><br><br><br><br><br>
+    <div>
+	    <h1> LOG IN </h1>
+        <form action='/login_logic' method=post>
+         	<input type='text' name='email' placeholder='YOUR EMAIL'  text-align=center><br>
+          <input type='password' name='password' placeholder='YOUR PASSWORD'><br>
+          <input type='submit' value='LOGIN'><br><br>
+          <h2>Don't have an account?</h2>
+          <a href='/signup'> SIGN UP </a><br> <br>
+        </form>
+      <%
+        if(context["massage"] != "")
+        {
+      %>
+      <h2 id="massage">
+        <%
+         cout << context["massage"] ;
+        %>
+      </h2>
+      <%
+        }
+      %>
+    </div>
+  </body>
+</html>
